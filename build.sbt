@@ -10,8 +10,9 @@ libraryDependencies ++= Seq(
   javaJdbc,
   cache,
   javaWs,
-  "mysql" % "mysql-connector-java" % "5.1.36",
-  javaJpa,
-  "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final",
-  evolutions
+  "com.datastax.cassandra" % "cassandra-driver-core" % "3.1.0",
+  "com.datastax.cassandra" % "cassandra-driver-mapping" % "3.1.0",
+  "com.datastax.cassandra" % "cassandra-driver-extras" % "3.1.0",
+  "com.impetus.kundera.client" % "kundera-cassandra-ds-driver" % "3.5",
+  filters
 )

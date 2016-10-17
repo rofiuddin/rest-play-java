@@ -11,3 +11,12 @@ GET     /message                    controllers.AsyncController.message
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+# Routes API Rest
+GET     /users                  controllers.UserController.list(page: Integer ?= 1, size: Integer ?= 3)
+GET     /users/$id<[0-9]+>      controllers.UserController.get(id: Integer)
+POST    /users                  controllers.UserController.create()
+PUT     /users                  controllers.UserController.update()
+PATCH   /users                  controllers.UserController.update()
+DELETE  /users/$id<[0-9]+>      controllers.UserController.delete(id: Integer)
